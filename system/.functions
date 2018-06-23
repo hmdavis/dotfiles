@@ -1,0 +1,20 @@
+function hbash() { 
+	heroku run bash -a "$1" 
+}
+
+function hreview() { 
+	heroku run rails c -a "$1" 
+}
+
+function migration() { 
+	bundle exec rails generate migration "$1"
+ }
+
+function apipie() { 
+	APIPIE_RECORD=examples rspec "$1"
+ }
+
+function weather() { 
+	curl -4 wttr.in/${1:-antwerp} 
+}
+

@@ -1,0 +1,51 @@
+# GIT
+alias gempty='git commit --allow-empty -m '\''empty commit'\'''
+alias githistory='git log --graph --oneline'
+
+# HEROKU
+alias hedge='heroku run rails c -s Private-S -a stash-api-edge-private'
+alias hlogin='heroku login --sso'
+alias hproduction='heroku run rails c -s Private-S -a stash-api-production-private'
+alias hstaging='heroku run rails c -s Private-S -a stash-api-staging-private'
+
+# RAILS
+alias migrate='bundle exec rake db:migrate'
+alias ng3='ngrok http 3000'
+alias rds='redis-server'
+alias resetdb='bundle exec rake db:drop; bundle exec rake db:create; bundle exec rake db:migrate'
+alias rollback='bundle exec rake db:rollback'
+alias rserver='bundle exec puma -C config/puma.rb'
+alias rtest='bundle exec rspec'
+alias rvm-restart='rvm_reload_flag=1 source '\''/Users/hdavis/.rvm/scripts/rvm'\'''
+alias sq='bundle exec sidekiq -C config/sidekiq.yml'
+alias stashrails='cd /Users/hdavis/Documents/code/stash-invest-rails'
+
+# MISC
+alias ls='ls -GFh'
+alias lsl='ls -GFlh'
+alias notebooks='cd ~/Documents/code/notebooks/'
+alias subl='open -a "Sublime Text"'
+alias speedtest="wget -O /dev/null http://speed.transip.nl/100mb.bin"
+alias quit="exit"
+alias week="date +%V"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+
+# Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
+alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
+
+# Empty the Trash on all mounted volumes and the main HDD.
+# Also, clear Apple’s System Logs to improve shell startup speed.
+# Finally, clear download history from quarantine. https://mths.be/bum
+alias emptytrash="sudo rm -rfv /Volumes/*/.Trashes; sudo rm -rfv ~/.Trash; sudo rm -rfv /private/var/log/asl/*.asl; sqlite3 ~/Library/Preferences/com.apple.LaunchServices.QuarantineEventsV* 'delete from LSQuarantineEvent'"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+# Kill all the tabs in Chrome to free up memory
+# [C] explained: http://www.commandlinefu.com/commands/view/402/exclude-grep-from-your-grepped-output-of-ps-alias-included-in-description
+alias chromekill="ps ux | grep '[C]hrome Helper --type=renderer' | grep -v extension-process | tr -s ' ' | cut -d ' ' -f2 | xargs kill"
+
