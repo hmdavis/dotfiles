@@ -27,3 +27,10 @@ ln -sfv "$DOTFILES_DIR/git/.gitignore_global" ~
 echo "Installing packages..."
 . "$DOTFILES_DIR/install/brew.sh"
 . "$DOTFILES_DIR/install/brew-cask.sh"
+
+# Set up mac
+files=`find /Users/hdavis/Documents/code/dotfiles/macos -depth 1`
+for DOTFILE in $files
+do
+	source $DOTFILE
+done

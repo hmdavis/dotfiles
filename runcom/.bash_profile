@@ -1,7 +1,7 @@
 source ~/git-completion.bash
 
-for DOTFILE in `find /Users/hdavis/Documents/code/dotfiles`
+files=`find /Users/hdavis/Documents/code/dotfiles/system -depth 1`
+for DOTFILE in $files
 do
-  [ -f “$DOTFILE” ] && source “$DOTFILE”
+	source $DOTFILE
 done
-
