@@ -15,6 +15,6 @@ function apipie() {
  }
 
 function weather() { 
-	curl -4 wttr.in/${1:-antwerp} 
+	curl -4 wttr.in/${1:-nyc} 
 }
 
