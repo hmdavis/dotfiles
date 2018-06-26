@@ -3,10 +3,7 @@ alias gempty='git commit --allow-empty -m '\''empty commit'\'''
 alias githistory='git log --graph --oneline'
 
 # HEROKU
-alias hedge='heroku run rails c -s Private-S -a stash-api-edge-private'
 alias hlogin='heroku login --sso'
-alias hproduction='heroku run rails c -s Private-S -a stash-api-production-private'
-alias hstaging='heroku run rails c -s Private-S -a stash-api-staging-private'
 
 # RAILS
 alias migrate='bundle exec rake db:migrate'
