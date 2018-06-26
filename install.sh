@@ -13,6 +13,13 @@ if test ! $(which brew); then
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+# Install Z Shell
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# TODO: install this font at https://github.com/powerline/fonts/blob/master/RobotoMono/Roboto%20Mono%20Light%20for%20Powerline.ttf
+# TODO: update iterm2 defaults "iTerm → Preferences → Profiles → Keys → Load Preset... → Natural Text Editing → Boom! Head explodes"
+# TODO: source .zsh
+
 echo "Updating homebrew..."
 brew update
 

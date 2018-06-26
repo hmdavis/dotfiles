@@ -11,6 +11,7 @@ apps=(
   evernote
   flux
   google-chrome
+  iterm2
   mysqlworkbench
   postman
   sequel-pro
