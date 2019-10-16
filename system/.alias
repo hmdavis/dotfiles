@@ -1,9 +1,14 @@
 # GIT
 alias gempty='git commit --allow-empty -m '\''empty commit'\'''
 alias githistory='git log --graph --oneline'
+alias cleanbranches='git branch -vv | grep 'origin/.*: gone]' | awk '{print $1}' | xargs git branch -D'
 
 # HEROKU
 alias hlogin='heroku login --sso'
+alias hlogin='heroku login --sso'
+alias hedge='heroku run rails c -s Private-S -a stash-api-edge-private'
+alias hstaging='heroku run rails c -s Private-S -a stash-api-staging-private'
+alias hproduction='heroku run rails c -s Private-S -a stash-api-production-private'
 
 # RAILS
 alias migrate='bundle exec rake db:migrate'
@@ -16,6 +21,8 @@ alias rtest='bundle exec rspec'
 alias rvm-restart='rvm_reload_flag=1 source '\''/Users/hdavis/.rvm/scripts/rvm'\'''
 alias sq='bundle exec sidekiq -C config/sidekiq.yml'
 alias stashrails='cd /Users/hdavis/Documents/code/stash-invest-rails'
+alias rspec='bin/rspec'
+alias springkill='ps -ef | grep spring | awk '{print $2}' | xargs kill -15'
 
 # MISC
 alias ls='ls -GFh'
@@ -29,6 +36,8 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias copyssh="pbcopy < $HOME/.ssh/id_rsa.pub"
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
+alias stashid="echo 1050583"
+alias repos="cd ~/Documents/code"
 
 # Get macOS Software Updates, and update installed Ruby gems, Homebrew, npm, and their installed packages
 alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup; npm install npm -g; npm update -g; sudo gem update --system; sudo gem update; sudo gem cleanup'
