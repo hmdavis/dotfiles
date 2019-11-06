@@ -9,6 +9,9 @@ alias hlogin='heroku login --sso'
 alias hedge='heroku run rails c -s Private-S -a stash-api-edge-private'
 alias hstaging='heroku run rails c -s Private-S -a stash-api-staging-private'
 alias hproduction='heroku run rails c -s Private-S -a stash-api-production-private'
+alias coachedge='heroku run rails c -s Private-S -a coach-service-edge'
+alias coachstaging='heroku run rails c -s Private-S -a coach-service-staging'
+alias coachprod='heroku run rails c -s Private-S -a coach-service-production'
 
 # RAILS
 alias migrate='bundle exec rake db:migrate'
