@@ -11,7 +11,6 @@ apps=(
   httpie
   pandoc
   peco
-  python
   scala
   wget
   wifi-password
